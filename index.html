@@ -10,7 +10,8 @@
 <body>
   <header>
     <img src="assets/logo.png" alt="Lüvable Logo" id="logo" />
-    <h1>Welcome to Lüvable Chatroom</h1>
+    <h1>Welcome to Lüvable.</h1>
+    <p class="motto">Reducing isolation and loneliness right where you are at.</p>
     <nav>
       <a href="#chatroom">Chatroom</a>
       <a href="#payments">Let's Chat</a>
@@ -20,10 +21,27 @@
   </header>
 
   <main>
+    <section id="announcement">
+      <h2>🌟 Exciting News!</h2>
+      <p class="announcement-text">We're building our Lüvable App! Stay tuned for something wonderful—connection is coming your way!</p>
+    </section>
+
+    <section id="rules">
+      <h2>Rules & Policies</h2>
+      <ul class="rules-list">
+        <li>Mean, rude, or disrespectful behaviour will not be tolerated.</li>
+        <li>Users who display rude or graphic material will be automatically banned by our system.</li>
+        <li>Our chat system uses smart filters to keep Lüvable safe and welcoming for all.</li>
+      </ul>
+    </section>
+
     <section id="chatroom">
       <h2>Chatroom</h2>
+      <div id="chat-warning" class="warning-message" style="display: none;"></div>
       <div id="messages"></div>
-      <input type="text" id="chat-input" placeholder="Type your message..."><button id="send-btn">Send</button>
+      <input type="text" id="chat-input" placeholder="Type your message..." disabled>
+      <button id="send-btn" disabled>Send</button>
+      <div id="user-status"></div>
     </section>
     <section id="payments">
       <h2>Lüvable Chat</h2>

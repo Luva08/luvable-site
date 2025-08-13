@@ -1,6 +1,7 @@
 // Stripe integration code
 
-const stripe = require('stripe')('your-stripe-secret-key');
+// Note: Replace 'your-stripe-secret-key' with your actual Stripe secret key
+// const stripe = Stripe('your-stripe-public-key');
 
 // Add your Stripe integration logic here
 
