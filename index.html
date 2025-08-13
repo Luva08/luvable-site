@@ -10,9 +10,10 @@
 <body>
   <header>
     <img src="assets/logo.png" alt="Lüvable Logo" id="logo" />
-    <h1>Welcome to Lüvable Chatroom</h1>
+    <h1>Welcome Lüva.. so glad You are here!</h1>
     <nav>
-      <a href="#chatroom">Chatroom</a>
+      <a href="#join-nation">Join Nation</a>
+      <a href="#help-section">Help</a>
       <a href="#payments">Let's Chat</a>
       <a href="terms.html">Terms</a>
       <a href="safety.html">Safety Center</a>
@@ -20,26 +21,128 @@
   </header>
 
   <main>
-    <section id="chatroom">
-      <h2>Chatroom</h2>
-      <div id="messages"></div>
-      <input type="text" id="chat-input" placeholder="Type your message..."><button id="send-btn">Send</button>
+    <!-- Join Lüva Nation Section -->
+    <section id="join-nation">
+      <h2>Join Lüva Nation</h2>
+      <p class="nation-description">
+        Become part of our caring community where genuine connections flourish. 
+        Together, we create a safe space for authentic conversations and mutual support.
+      </p>
+      <button id="join-nation-btn">Join Lüva Nation</button>
     </section>
+
+    <!-- Help Section with Ask a Lüva -->
+    <section id="help-section">
+      <h2>Help & Support</h2>
+      <div id="question-categories">
+        <label for="category-select">Select a category for your question:</label>
+        <select id="category-select">
+          <option value="">Choose category...</option>
+          <option value="relationships">Relationships & Dating</option>
+          <option value="mental-health">Mental Health & Wellness</option>
+          <option value="career">Career & Life Goals</option>
+          <option value="family">Family & Friends</option>
+          <option value="personal-growth">Personal Growth</option>
+          <option value="communication">Communication Skills</option>
+          <option value="conflict">Conflict Resolution</option>
+          <option value="self-care">Self-Care & Boundaries</option>
+          <option value="general">General Support</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      
+      <div id="ask-question">
+        <textarea id="question-input" placeholder="Ask your question here... Other Lüvas in our community will help answer." rows="4"></textarea>
+        <div id="question-controls">
+          <div id="avatar-section">
+            <label>Choose your avatar:</label>
+            <div id="avatar-options">
+              <div class="avatar-option selected" data-avatar="default1">🌸</div>
+              <div class="avatar-option" data-avatar="default2">💝</div>
+              <div class="avatar-option" data-avatar="default3">🌺</div>
+              <div class="avatar-option" data-avatar="default4">✨</div>
+              <div class="avatar-option" data-avatar="default5">🦋</div>
+              <div class="avatar-option" data-avatar="custom">
+                <input type="file" id="custom-avatar" accept="image/*" style="display: none;">
+                <span class="upload-icon">📁</span>
+              </div>
+            </div>
+          </div>
+          
+          <div id="emoji-picker">
+            <label>Add emotion:</label>
+            <div id="emoji-options">
+              <span class="emoji-option">😊</span>
+              <span class="emoji-option">😢</span>
+              <span class="emoji-option">❤️</span>
+              <span class="emoji-option">😔</span>
+              <span class="emoji-option">😍</span>
+              <span class="emoji-option">🤗</span>
+              <span class="emoji-option">😅</span>
+              <span class="emoji-option">🙏</span>
+              <span class="emoji-option">💪</span>
+              <span class="emoji-option">🎉</span>
+            </div>
+          </div>
+          
+          <div id="captcha-section">
+            <label for="captcha-input">Verify you're human (what's 5 + 3?):</label>
+            <input type="number" id="captcha-input" placeholder="Enter answer" required>
+          </div>
+          
+          <button id="ask-luva-btn">Ask a Lüva</button>
+        </div>
+      </div>
+      
+      <div id="questions-feed">
+        <h3>Community Questions</h3>
+        <div id="questions-list">
+          <!-- Questions will be dynamically loaded here -->
+        </div>
+      </div>
+    </section>
+
     <section id="payments">
       <h2>Lüvable Chat</h2>
       <p class="product-description">
         Lüvable — Less than a latte for 2 hours of real connection.<br>
-        <strong>Price: $4</strong>
+        <strong>Price: $4</strong> <span class="discount-note">(Share for $2 discount!)</span>
       </p>
       <button id="pay-btn">Let's Chat</button>
     </section>
+
+    <!-- Enhanced Share Section -->
     <section id="share">
-      <h2>Share Lüvable</h2>
+      <h2>Share Lüvable & Get $2 Off!</h2>
+      <p class="share-incentive">Share our community with your friends and get $2 off your next chat session for a whole month!</p>
       <div class="social-share">
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://your-site.netlify.app/" target="_blank">Facebook</a>
-        <a href="https://www.instagram.com/" target="_blank">Instagram</a>
-        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://your-site.netlify.app/" target="_blank">LinkedIn</a>
+        <button class="share-btn facebook" onclick="shareToFacebook()">
+          <span class="share-icon">📘</span> Facebook
+        </button>
+        <button class="share-btn instagram" onclick="shareToInstagram()">
+          <span class="share-icon">📷</span> Instagram
+        </button>
+        <button class="share-btn twitter" onclick="shareToTwitter()">
+          <span class="share-icon">🐦</span> Twitter
+        </button>
+        <button class="share-btn linkedin" onclick="shareToLinkedIn()">
+          <span class="share-icon">💼</span> LinkedIn
+        </button>
+        <button class="share-btn copy-link" onclick="copyShareLink()">
+          <span class="share-icon">🔗</span> Copy Link
+        </button>
       </div>
+      <div id="share-success" style="display: none;">
+        <p class="success-message">Thanks for sharing! Your $2 discount has been applied to your account. 💖</p>
+      </div>
+    </section>
+
+    <!-- Privacy Notice -->
+    <section id="privacy-notice">
+      <p class="privacy-text">
+        For your safety, we quietly track device info and IP to protect our Lüvas. 
+        Genuine users have nothing to worry about—only those who break the rules will ever be affected.
+      </p>
     </section>
   </main>
 
