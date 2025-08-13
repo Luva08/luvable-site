@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lüvable Site Chatroom</title>
+  <meta name="description" content="A warm, welcoming chatroom and community by Lüvable.">
+  <meta property="og:title" content="Lüvable Site Chatroom" />
+  <meta property="og:description" content="Join the conversation! A warm, welcoming chatroom and community by Lüvable." />
+  <meta property="og:image" content="https://your-site.netlify.app/assets/logo.png" />
+  <meta property="og:url" content="https://your-site.netlify.app/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Lüvable Site Chatroom" />
+  <meta name="twitter:description" content="Join the conversation! A warm, welcoming chatroom and community by Lüvable." />
+  <meta name="twitter:image" content="https://your-site.netlify.app/assets/logo.png" />
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <img src="assets/logo.png" alt="Lüvable Logo" id="logo" />
+    <h1>Welcome to Lüvable Chatroom</h1>
+    <nav>
+      <a href="#chatroom">Chatroom</a>
+      <a href="#support">Support</a>
+      <a href="terms.html">Terms</a>
+      <a href="safety.html">Safety Center</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="chatroom">
+      <h2>Chatroom</h2>
+      <div id="messages"></div>
+      <input type="text" id="chat-input" placeholder="Type your message..."><button id="send-btn">Send</button>
+    </section>
+    <section id="payments">
+      <h2>Support Lüvable</h2>
+      <button id="pay-btn">Support Us with Stripe</button>
+    </section>
+    <section id="share">
+      <h2>Share Lüvable</h2>
+      <div class="social-share">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://your-site.netlify.app/" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://your-site.netlify.app/" target="_blank">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="terms.html">Terms</a> | <a href="safety.html">Safety Center</a>
+    <br>&copy; 2025 Lüvable. All rights reserved.
+  </footer>
+  <script src="js/chat.js"></script>
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="js/stripe.js"></script>
+</body>
+</html>
