@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
       try {
         // Show loading state
         payBtn.disabled = true;
-        payBtn.innerHTML = '<img src="assets/heart.svg" alt="Heart" class="heart-button"> Processing...';
+        payBtn.innerHTML = '<svg class="heart-button"><use href="#icon-heart-luvable"></use></svg> Processing...';
         
         // In a real application, you would fetch the session ID from your backend
         // For now, we'll simulate the checkout process
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
       } finally {
         // Reset button state
         payBtn.disabled = false;
-        payBtn.innerHTML = '<img src="assets/heart.svg" alt="Heart" class="heart-button"> Let\'s Chat';
+        payBtn.innerHTML = '<svg class="heart-button"><use href="#icon-heart-luvable"></use></svg> Let\'s Chat';
       }
     });
   }
