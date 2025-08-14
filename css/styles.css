@@ -262,6 +262,7 @@ footer a:hover {
   margin: 0 5px;
   opacity: 0.8;
   transition: opacity 0.2s;
+  fill: #e75480;
 }
 
 .heart-inline:hover {
@@ -273,6 +274,7 @@ footer a:hover {
   height: 16px;
   vertical-align: middle;
   margin-right: 8px;
+  fill: currentColor;
 }
 
 .heart-social {
@@ -280,6 +282,7 @@ footer a:hover {
   height: 14px;
   vertical-align: middle;
   margin-right: 6px;
+  fill: currentColor;
 }
 
 /* Additional styles for restored sections */
@@ -351,6 +354,114 @@ footer a:hover {
   margin-top: 1em;
   font-weight: 600;
   box-shadow: 0 2px 8px rgba(231,84,128,0.3);
+}
+
+/* Lüvable Discount System Styles */
+.luva-discount-badge {
+  background: linear-gradient(135deg, #e75480 0%, #4B2E83 100%);
+  color: #fff;
+  padding: 0.8em 1.2em;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 1.5em;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(231,84,128,0.4);
+  animation: pulse-glow 2s ease-in-out infinite alternate;
+}
+
+.luva-discount-badge .badge-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3em;
+}
+
+.luva-discount-badge .discount-text {
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.luva-discount-badge .referral-count {
+  font-size: 0.9em;
+  opacity: 0.9;
+}
+
+.luva-success-banner {
+  background: linear-gradient(135deg, #e75480 0%, #4B2E83 100%);
+  color: #fff;
+  padding: 1.2em;
+  border-radius: 12px;
+  text-align: center;
+  margin: 1.5em auto;
+  max-width: 600px;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(231,84,128,0.3);
+  animation: slideInUp 0.6s ease-out;
+}
+
+.luva-success-banner .success-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+
+.luva-success-banner .success-message {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.luva-success-banner .encouragement {
+  font-size: 0.95em;
+  opacity: 0.95;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.luva-extension-note {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #4B2E83;
+  color: #fff;
+  padding: 0.8em 1.2em;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.1em;
+  z-index: 1000;
+  transition: opacity 0.5s ease;
+  box-shadow: 0 4px 12px rgba(75,46,131,0.4);
+}
+
+.heart-icon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+/* Animations */
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 4px 12px rgba(231,84,128,0.4);
+  }
+  100% {
+    box-shadow: 0 4px 20px rgba(231,84,128,0.6);
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Responsive improvements */

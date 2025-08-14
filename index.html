@@ -11,12 +11,12 @@
   <header>
     <img src="assets/logo.png" alt="Lüvable Logo" id="logo">
     <h1>Lüvable Chat</h1>
-    <p class="motto">Real connections in a digital world <img src="assets/heart.svg" alt="Heart" class="heart-inline"></p>
+    <p class="motto">Real connections in a digital world <svg class="heart-inline"><use href="#icon-heart-luvable"></use></svg></p>
   </header>
 
   <main>
     <section id="announcement">
-      <h2><img src="assets/heart.svg" alt="Heart" class="heart-inline"> Welcome to Lüvable <img src="assets/heart.svg" alt="Heart" class="heart-inline"></h2>
+      <h2><svg class="heart-inline"><use href="#icon-heart-luvable"></use></svg> Welcome to Lüvable <svg class="heart-inline"><use href="#icon-heart-luvable"></use></svg></h2>
       <p class="announcement-text">We're building our Lüvable App! Stay tuned for something wonderful—connection is coming your way!</p>
     </section>
 
@@ -39,21 +39,21 @@
     </section>
 
     <section id="payments">
-      <h2><img src="assets/heart.svg" alt="Heart" class="heart-inline"> Lüvable Chat <img src="assets/heart.svg" alt="Heart" class="heart-inline"></h2>
+      <h2><svg class="heart-inline"><use href="#icon-heart-luvable"></use></svg> Lüvable Chat <svg class="heart-inline"><use href="#icon-heart-luvable"></use></svg></h2>
       <p class="product-description">
         Lüvable — Less than a latte for 2 hours of real connection.<br>
         <strong>Price: $4</strong>
       </p>
-      <button id="pay-btn"><img src="assets/heart.svg" alt="Heart" class="heart-button"> Let's Chat</button>
+      <button id="pay-btn"><svg class="heart-button"><use href="#icon-heart-luvable"></use></svg> Let's Chat</button>
     </section>
 
     <section id="share">
-      <h2>Share Lüvable <img src="assets/heart.svg" alt="Heart" class="heart-inline"></h2>
-      <p class="share-description">Share Lüvable with friends and get a <strong>10% discount</strong> on your next session!</p>
+      <h2>Share Lüvable <svg class="heart-inline"><use href="#icon-heart-luvable"></use></svg></h2>
+      <p class="share-description">Share Lüvable with friends and get a <strong>50% discount</strong> for 7 days!</p>
       <div class="social-share">
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://your-site.netlify.app/" target="_blank" onclick="trackShare('facebook')"><img src="assets/heart.svg" alt="Heart" class="heart-social"> Facebook</a>
-        <a href="https://www.instagram.com/" target="_blank" onclick="trackShare('instagram')"><img src="assets/heart.svg" alt="Heart" class="heart-social"> Instagram</a>
-        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://your-site.netlify.app/" target="_blank" onclick="trackShare('linkedin')"><img src="assets/heart.svg" alt="Heart" class="heart-social"> LinkedIn</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://your-site.netlify.app/" target="_blank" onclick="trackShare('facebook')"><svg class="heart-social"><use href="#icon-heart-luvable"></use></svg> Facebook</a>
+        <a href="https://www.instagram.com/" target="_blank" onclick="trackShare('instagram')"><svg class="heart-social"><use href="#icon-heart-luvable"></use></svg> Instagram</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://your-site.netlify.app/" target="_blank" onclick="trackShare('linkedin')"><svg class="heart-social"><use href="#icon-heart-luvable"></use></svg> LinkedIn</a>
       </div>
       <div id="share-discount" class="discount-message" style="display: none;">
         🎉 Thanks for sharing! Use code <strong>SHARE10</strong> for 10% off your next session!
@@ -63,22 +63,35 @@
 
   <footer>
     <a href="terms.html">Terms</a> | <a href="safety.html">Safety Center</a>
-    <br><img src="assets/heart.svg" alt="Heart" class="heart-inline"> &copy; 2025 Lüvable. All rights reserved. <img src="assets/heart.svg" alt="Heart" class="heart-inline">
+    <br><svg class="heart-inline"><use href="#icon-heart-luvable"></use></svg> &copy; 2025 Lüvable. All rights reserved. <svg class="heart-inline"><use href="#icon-heart-luvable"></use></svg>
   </footer>
   <script src="js/chat.js"></script>
+  <script src="js/discount.js"></script>
   <script src="https://js.stripe.com/v3/"></script>
   <script src="js/stripe.js"></script>
   <script>
     // Share tracking for discount feature
     function trackShare(platform) {
       console.log(`User shared on ${platform}`);
-      setTimeout(() => {
-        const discountDiv = document.getElementById('share-discount');
-        if (discountDiv) {
-          discountDiv.style.display = 'block';
-          discountDiv.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 2000);
+      
+      // Use the new discount system if available
+      if (window.luvaDiscountSystem) {
+        window.luvaDiscountSystem.processShare();
+      } else {
+        // Fallback to old behavior if discount system not loaded yet
+        setTimeout(() => {
+          if (window.luvaDiscountSystem) {
+            window.luvaDiscountSystem.processShare();
+          } else {
+            // Show basic message as fallback
+            const discountDiv = document.getElementById('share-discount');
+            if (discountDiv) {
+              discountDiv.style.display = 'block';
+              discountDiv.scrollIntoView({ behavior: 'smooth' });
+            }
+          }
+        }, 100);
+      }
     }
   </script>
 </body>
