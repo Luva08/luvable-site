@@ -281,3 +281,87 @@ footer a:hover {
   vertical-align: middle;
   margin-right: 6px;
 }
+
+/* Additional styles for restored sections */
+.motto {
+  font-size: 1.1em;
+  font-style: italic;
+  color: #e75480;
+  margin: 0.5em 0 1em 0;
+  font-weight: 500;
+}
+
+#announcement {
+  background: linear-gradient(135deg, #fff0f7 0%, #ffe0e3 50%, #fff6f0 100%);
+  border: 2px solid #ffd6d2;
+  text-align: center;
+}
+
+.announcement-text {
+  font-size: 1.1em;
+  color: #4B2E83;
+  font-weight: 500;
+  margin: 0;
+}
+
+#rules {
+  background: #fff6f0;
+  border-left: 4px solid #e75480;
+}
+
+.rules-list {
+  margin: 0;
+  padding-left: 1.5em;
+}
+
+.rules-list li {
+  margin-bottom: 0.8em;
+  color: #4B2E83;
+  font-weight: 500;
+}
+
+.emoji-btn {
+  background: #e75480;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5em;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.2s;
+}
+
+.emoji-btn:hover {
+  background: #4B2E83;
+}
+
+.share-description {
+  text-align: center;
+  font-size: 1.1em;
+  margin-bottom: 1em;
+  color: #4B2E83;
+}
+
+.discount-message {
+  background: linear-gradient(90deg, #e75480 0%, #4B2E83 100%);
+  color: #fff;
+  padding: 1em;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 1em;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(231,84,128,0.3);
+}
+
+/* Responsive improvements */
+@media (max-width: 600px) {
+  .social-share {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  
+  .social-share a {
+    margin-right: 0;
+  }
+}
