@@ -1,77 +1,28 @@
-# Lüvable Chatroom
+# Lüvable Chat
 
-<div align="center">
-  <img src="assets/logo.png" alt="Lüvable Logo" width="120" height="120">
-  <br>
-  <h3>Less than a latte for 2 hours of real connection</h3>
-  <p>
-    <img src="assets/heart.svg" alt="Heart" width="20" height="20">
-    Join our warm, welcoming chatroom community
-    <img src="assets/heart.svg" alt="Heart" width="20" height="20">
-  </p>
-</div>
-
-## About
-
-Lüvable is a unique chatroom platform that brings people together for meaningful conversations. For just $4 — less than the cost of a latte — you can enjoy 2 hours of genuine human connection in our moderated, safe environment.
+Lüvable is a community Q&A chat platform designed for real connection, with easy payments via Stripe, robust moderation, and playful branding.
 
 ## Features
 
-- 💬 **Real-time Chat**: Connect instantly with like-minded people
-- 🛡️ **Safe Environment**: Moderated community with safety guidelines
-- ❤️ **Authentic Connections**: Foster genuine relationships and conversations
-- 💳 **Affordable**: Just $4 for 2 hours of connection
-- 📱 **Responsive Design**: Works seamlessly on all devices
+- **Stripe Payments:** Secure payment integration for chat access.
+- **Community Q&A:** Ask questions and chat with others in a safe, moderated environment.
+- **Moderation:** Messages are filtered for banned words, keeping the chat safe.
+- **Brand Assets:** Lüvable logo and heart icons used throughout.
+- **Responsive & Accessible:** Works on all devices, readable and easy to use.
 
-## Getting Started
+## Usage
 
-1. Visit our [chatroom](index.html)
-2. Choose your session length
-3. Join the conversation and make new connections!
+1. Open the site.
+2. Pay via Stripe to access premium chat features.
+3. Chat in the Q&A area — moderation filters keep things friendly.
 
-## Brand Identity
+## Development
 
-<div align="center">
-  <img src="assets/logo.png" alt="Lüvable Logo" width="80" height="80">
-  <img src="assets/heart.png" alt="Heart Icon" width="60" height="60">
-  <img src="assets/heart.svg" alt="Heart SVG" width="60" height="60">
-</div>
-
-Our brand represents warmth, connection, and genuine human interaction. The **Lüvable logo** <img src="assets/logo.png" alt="Logo" width="24" height="24"> and **heart icon** <img src="assets/heart.svg" alt="Heart" width="20" height="20"> are our trademark identifiers, symbolizing the love and care we put into fostering real connections.
-
-### Brand Assets
-
-For detailed brand guidelines and asset usage, see our [Brand Assets Documentation](docs/brand/brand-assets.md).
-
-## Technology Stack
-
-- **Frontend**: HTML5, CSS3, JavaScript
-- **Styling**: Custom CSS with CSS Variables
-- **Payment**: Stripe Integration
-- **Hosting**: Static site hosting (Netlify compatible)
-
-## Safety & Trust
-
-We prioritize user safety with:
-- Community moderation
-- Clear [terms of service](terms.html)
-- Comprehensive [safety center](safety.html)
-- Secure payment processing
-
-## Connect With Us
-
-Share Lüvable with your friends and help us build a more connected world:
-
-- [Facebook](https://www.facebook.com/sharer/sharer.php?u=https://your-site.netlify.app/)
-- [Instagram](https://www.instagram.com/)
-- [LinkedIn](https://www.linkedin.com/sharing/share-offsite/?url=https://your-site.netlify.app/)
+- Modify UI via `index.html` and `styles.css`.
+- Moderate banned words in `js/chat.js`.
+- Stripe integration in `js/stripe.js` (replace session ID logic as needed).
+- Brand assets live in `/assets`.
 
 ---
 
-<div align="center">
-  <img src="assets/heart.svg" alt="Heart" width="16" height="16">
-  <strong>Made with love for genuine human connection</strong>
-  <img src="assets/heart.svg" alt="Heart" width="16" height="16">
-  <br><br>
-  © 2025 Lüvable. All rights reserved.
-</div>
+**2025 Lüvable. All rights reserved.**

@@ -1,14 +1,45 @@
-<section id="payments">
-  <h2>
-    <img src="assets/heart.svg" alt="Heart" class="heart-inline"> Lüvable Chat <img src="assets/heart.svg" alt="Heart" class="heart-inline">
-  </h2>
-  <p class="product-description">
-    Lüvable — Less than a latte for 2 hours of real connection.<br>
-    <strong>Price: $4</strong>
-  </p>
-  <button id="pay-btn">
-    <img src="assets/heart.svg" alt="Heart" class="heart-button"> Let's Chat
-  </button>
-</section>
-<script src="https://js.stripe.com/v3/"></script>
-<script src="js/stripe.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lüvable Chat</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <img src="assets/logo.svg" alt="Lüvable Logo" id="logo">
+    <h1>Lüvable Chat</h1>
+  </header>
+
+  <section id="payments">
+    <h2>
+      <img src="assets/heart.svg" alt="Heart" class="heart-inline"> Lüvable Chat <img src="assets/heart.svg" alt="Heart" class="heart-inline">
+    </h2>
+    <p class="product-description">
+      Lüvable — Less than a latte for 2 hours of real connection.<br>
+      <strong>Price: $4</strong>
+    </p>
+    <button id="pay-btn">
+      <img src="assets/heart.svg" alt="Heart" class="heart-button"> Let's Chat
+    </button>
+  </section>
+
+  <section id="chatroom">
+    <h2>Community Q&A</h2>
+    <div id="chat-messages"></div>
+    <form id="chat-form">
+      <input type="text" id="chat-input" placeholder="Ask a question or share your thoughts..." maxlength="200" autocomplete="off" required>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Lüvable. All rights reserved. <img src="assets/heart.svg" alt="Heart" class="heart-inline"></p>
+  </footer>
+
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="js/stripe.js"></script>
+  <script src="js/chat.js"></script>
+</body>
+</html>
