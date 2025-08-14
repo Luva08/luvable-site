@@ -1,0 +1,34 @@
+{
+  "name": "Lüvable Chat",
+  "short_name": "Lüvable",
+  "description": "Real connections in a digital world - join our warm, welcoming chatroom community",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff6f0",
+  "theme_color": "#e75480",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/heart.png",
+      "sizes": "100x100",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/logo.png",
+      "sizes": "200x200",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "32x32",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["social", "communication"],
+  "lang": "en",
+  "scope": "/",
+  "screenshots": []
+}

@@ -1,2 +1,19 @@
+# Robots.txt for Lüvable Chat
 User-agent: *
 Allow: /
+
+# Allow access to important resources
+Allow: /assets/
+Allow: /css/
+Allow: /js/
+
+# Disallow any private or temporary directories
+Disallow: /tmp/
+Disallow: /.git/
+Disallow: /docs/
+
+# Sitemap location
+Sitemap: https://luvable-site.netlify.app/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
