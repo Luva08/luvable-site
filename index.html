@@ -1,72 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Lüvable Chatroom</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Lüvable — Less than a latte for 2 hours of real connection. Join our warm chatroom!">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-  <header>
-    <img src="assets/logo.png" alt="Lüvable Logo" id="logo" />
-    <h1>Welcome to Lüvable.</h1>
-    <p class="motto">Reducing isolation and loneliness right where you are at.</p>
-    <nav>
-      <a href="#chatroom">Chatroom</a>
-      <a href="#payments">Let's Chat</a>
-      <a href="terms.html">Terms</a>
-      <a href="safety.html">Safety Center</a>
-    </nav>
-  </header>
-
-  <main>
-    <section id="announcement">
-      <h2>🌟 Exciting News!</h2>
-      <p class="announcement-text">We're building our Lüvable App! Stay tuned for something wonderful—connection is coming your way!</p>
-    </section>
-
-    <section id="rules">
-      <h2>Rules & Policies</h2>
-      <ul class="rules-list">
-        <li>Mean, rude, or disrespectful behaviour will not be tolerated.</li>
-        <li>Users who display rude or graphic material will be automatically banned by our system.</li>
-        <li>Our chat system uses smart filters to keep Lüvable safe and welcoming for all.</li>
-      </ul>
-    </section>
-
-    <section id="chatroom">
-      <h2>Chatroom</h2>
-      <div id="chat-warning" class="warning-message" style="display: none;"></div>
-      <div id="messages"></div>
-      <input type="text" id="chat-input" placeholder="Type your message..." disabled>
-      <button id="send-btn" disabled>Send</button>
-      <div id="user-status"></div>
-    </section>
-    <section id="payments">
-      <h2><img src="assets/heart.svg" alt="Heart" class="heart-inline"> Lüvable Chat <img src="assets/heart.svg" alt="Heart" class="heart-inline"></h2>
-      <p class="product-description">
-        Lüvable — Less than a latte for 2 hours of real connection.<br>
-        <strong>Price: $4</strong>
-      </p>
-      <button id="pay-btn"><img src="assets/heart.svg" alt="Heart" class="heart-button"> Let's Chat</button>
-    </section>
-    <section id="share">
-      <h2>Share Lüvable <img src="assets/heart.svg" alt="Heart" class="heart-inline"></h2>
-      <div class="social-share">
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://your-site.netlify.app/" target="_blank"><img src="assets/heart.svg" alt="Heart" class="heart-social"> Facebook</a>
-        <a href="https://www.instagram.com/" target="_blank"><img src="assets/heart.svg" alt="Heart" class="heart-social"> Instagram</a>
-        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://your-site.netlify.app/" target="_blank"><img src="assets/heart.svg" alt="Heart" class="heart-social"> LinkedIn</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <a href="terms.html">Terms</a> | <a href="safety.html">Safety Center</a>
-    <br><img src="assets/heart.svg" alt="Heart" class="heart-inline"> &copy; 2025 Lüvable. All rights reserved. <img src="assets/heart.svg" alt="Heart" class="heart-inline">
-  </footer>
-  <script src="js/chat.js"></script>
-  <script src="https://js.stripe.com/v3/"></script>
-  <script src="js/stripe.js"></script>
-</body>
-</html>
+<section id="payments">
+  <h2>
+    <img src="assets/heart.svg" alt="Heart" class="heart-inline"> Lüvable Chat <img src="assets/heart.svg" alt="Heart" class="heart-inline">
+  </h2>
+  <p class="product-description">
+    Lüvable — Less than a latte for 2 hours of real connection.<br>
+    <strong>Price: $4</strong>
+  </p>
+  <button id="pay-btn">
+    <img src="assets/heart.svg" alt="Heart" class="heart-button"> Let's Chat
+  </button>
+</section>
+<script src="https://js.stripe.com/v3/"></script>
+<script src="js/stripe.js"></script>
