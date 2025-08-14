@@ -253,3 +253,31 @@ footer a {
 footer a:hover {
   color: #4B2E83;
 }
+
+/* Heart icon styles */
+.heart-inline {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin: 0 5px;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.heart-inline:hover {
+  opacity: 1;
+}
+
+.heart-button {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.heart-social {
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
