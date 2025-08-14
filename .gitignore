@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+# Temporary files
+.tmp/
+*.tmp
+*.log
+
+# Environment variables
+.env

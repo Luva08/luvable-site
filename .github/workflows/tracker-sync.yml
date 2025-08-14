@@ -1,0 +1,38 @@
+name: Sync Project Tracker
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: '0 5 * * *'
+  issues:
+    types: [opened, edited, closed, reopened, labeled, unlabeled]
+jobs:
+  sync-tracker:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Normalize tracker
+        run: |
+          python scripts/update_tracker.py docs/Luvable_Project_Tracker.md || true
+      - name: Sync from Issues
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          python scripts/sync_tracker_from_issues.py
+      - name: Commit changes if any
+        run: |
+          if ! git diff --quiet; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add docs/Luvable_Project_Tracker.md
+            git commit -m 'chore(tracker): sync status from issues'
+            git push
+          else
+            echo 'No changes to commit.'
